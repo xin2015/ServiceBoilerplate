@@ -1,0 +1,2 @@
+net stop ServiceBoilerplateService
+net start ServiceBoilerplateService
