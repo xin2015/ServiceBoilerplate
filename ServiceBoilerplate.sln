@@ -11,6 +11,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ServiceBoilerplate.BLL", "S
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ServiceBoilerplate.WindowsService", "ServiceBoilerplate.WindowsService\ServiceBoilerplate.WindowsService.csproj", "{649AFDD1-394B-4649-A84C-08C1D71EFB75}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ServiceBoilerplate.Forms", "ServiceBoilerplate.Forms\ServiceBoilerplate.Forms.csproj", "{A40E2344-67FC-4E43-A5B6-87DFBEE8733F}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -33,6 +35,10 @@ Global
 		{649AFDD1-394B-4649-A84C-08C1D71EFB75}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{649AFDD1-394B-4649-A84C-08C1D71EFB75}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{649AFDD1-394B-4649-A84C-08C1D71EFB75}.Release|Any CPU.Build.0 = Release|Any CPU
+		{A40E2344-67FC-4E43-A5B6-87DFBEE8733F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A40E2344-67FC-4E43-A5B6-87DFBEE8733F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A40E2344-67FC-4E43-A5B6-87DFBEE8733F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A40E2344-67FC-4E43-A5B6-87DFBEE8733F}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
