@@ -1,6 +1,6 @@
 ﻿namespace ServiceBoilerplate.Forms
 {
-    partial class Form1
+    partial class ServiceBoilerplateForm
     {
         /// <summary>
         /// 必需的设计器变量。

@@ -40,31 +40,27 @@ namespace ServiceBoilerplate.Service
                          .Build();
                      scheduler.ScheduleJob(job, trigger);
                  };
-                Type[] types = Assembly.GetExecutingAssembly().GetTypes();
                 Type jobInterface = typeof(IJob);
                 Type syncInterface = typeof(ISync);
                 Type syncJobBaseType = typeof(SyncJobBase<>);
                 Type coverJobBaseType = typeof(CoverJobBase<>);
-                foreach (Type type in types)
+                foreach (Type type in Assembly.GetExecutingAssembly().GetTypes())
                 {
-                    if (type.Name.EndsWith("Job"))
+                    if (type.Name.EndsWith("Job") && type.GetInterfaces().Contains(jobInterface))
                     {
-                        if (type.GetInterfaces().Contains(jobInterface))
-                        {
-                            scheduleJobAction(type.Name, type);
-                        }
+                        scheduleJobAction(type.Name, type);
                     }
-                    else if (type.Name.EndsWith("Sync"))
+                }
+                foreach (Type type in Assembly.GetAssembly(syncInterface).GetTypes())
+                {
+                    if (type.Name.EndsWith("Sync") && type.GetInterfaces().Contains(syncInterface))
                     {
-                        if (type.GetInterfaces().Contains(syncInterface))
-                        {
-                            string syncJobName = string.Format("{0}Job", type.Name);
-                            string coverJobName = syncJobName.Replace("Sync", "Cover");
-                            Type syncJobType = syncJobBaseType.MakeGenericType(type);
-                            Type coverJobType = coverJobBaseType.MakeGenericType(type);
-                            scheduleJobAction(syncJobName, syncJobType);
-                            scheduleJobAction(coverJobName, coverJobType);
-                        }
+                        string syncJobName = string.Format("{0}Job", type.Name);
+                        string coverJobName = syncJobName.Replace("Sync", "Cover");
+                        Type syncJobType = syncJobBaseType.MakeGenericType(type);
+                        Type coverJobType = coverJobBaseType.MakeGenericType(type);
+                        scheduleJobAction(syncJobName, syncJobType);
+                        scheduleJobAction(coverJobName, coverJobType);
                     }
                 }
                 logger.Info("-------- Initialization Complete --------");

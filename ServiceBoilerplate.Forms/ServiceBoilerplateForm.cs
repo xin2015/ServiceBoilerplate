@@ -12,21 +12,18 @@ using System.Windows.Forms;
 
 namespace ServiceBoilerplate.Forms
 {
-    public partial class Form1 : Form
+    public partial class ServiceBoilerplateForm : Form
     {
-        public Form1()
+        public ServiceBoilerplateForm()
         {
             InitializeComponent();
-            Type[] types = Assembly.GetExecutingAssembly().GetTypes();
             Type syncInterface = typeof(ISync);
+            Type[] types = Assembly.GetAssembly(syncInterface).GetTypes();
             foreach (Type type in types)
             {
-                if (type.Name.EndsWith("Sync"))
+                if (type.Name.EndsWith("Sync") && type.GetInterfaces().Contains(syncInterface))
                 {
-                    if (type.GetInterfaces().Contains(syncInterface))
-                    {
-                        CodeComboBox.Items.Add(type.Name);
-                    }
+                    CodeComboBox.Items.Add(type.Name.Replace("Sync", string.Empty));
                 }
             }
         }
