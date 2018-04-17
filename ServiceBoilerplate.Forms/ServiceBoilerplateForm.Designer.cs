@@ -36,6 +36,8 @@
             this.BeginTimeLabel = new System.Windows.Forms.Label();
             this.ResultTextBox = new System.Windows.Forms.TextBox();
             this.ResultLabel = new System.Windows.Forms.Label();
+            this.SyncButton = new System.Windows.Forms.Button();
+            this.CoverButton = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // CodeComboBox
@@ -45,7 +47,6 @@
             this.CodeComboBox.Name = "CodeComboBox";
             this.CodeComboBox.Size = new System.Drawing.Size(188, 20);
             this.CodeComboBox.TabIndex = 18;
-            this.CodeComboBox.SelectedIndexChanged += new System.EventHandler(this.CodeComboBox_SelectedIndexChanged);
             // 
             // CodeLabel
             // 
@@ -55,7 +56,6 @@
             this.CodeLabel.Size = new System.Drawing.Size(41, 12);
             this.CodeLabel.TabIndex = 17;
             this.CodeLabel.Text = "Code：";
-            this.CodeLabel.Click += new System.EventHandler(this.CodeLabel_Click);
             // 
             // EndTimeTextBox
             // 
@@ -63,7 +63,6 @@
             this.EndTimeTextBox.Name = "EndTimeTextBox";
             this.EndTimeTextBox.Size = new System.Drawing.Size(188, 21);
             this.EndTimeTextBox.TabIndex = 16;
-            this.EndTimeTextBox.TextChanged += new System.EventHandler(this.EndTimeTextBox_TextChanged);
             // 
             // EndTimeLabel
             // 
@@ -73,7 +72,6 @@
             this.EndTimeLabel.Size = new System.Drawing.Size(65, 12);
             this.EndTimeLabel.TabIndex = 14;
             this.EndTimeLabel.Text = "结束时间：";
-            this.EndTimeLabel.Click += new System.EventHandler(this.EndTimeLabel_Click);
             // 
             // BeginTimeTextBox
             // 
@@ -81,7 +79,6 @@
             this.BeginTimeTextBox.Name = "BeginTimeTextBox";
             this.BeginTimeTextBox.Size = new System.Drawing.Size(188, 21);
             this.BeginTimeTextBox.TabIndex = 12;
-            this.BeginTimeTextBox.TextChanged += new System.EventHandler(this.BeginTimeTextBox_TextChanged);
             // 
             // BeginTimeLabel
             // 
@@ -91,7 +88,6 @@
             this.BeginTimeLabel.Size = new System.Drawing.Size(65, 12);
             this.BeginTimeLabel.TabIndex = 11;
             this.BeginTimeLabel.Text = "开始时间：";
-            this.BeginTimeLabel.Click += new System.EventHandler(this.BeginTimeLabel_Click);
             // 
             // ResultTextBox
             // 
@@ -109,11 +105,33 @@
             this.ResultLabel.TabIndex = 13;
             this.ResultLabel.Text = "结果：";
             // 
-            // Form1
+            // SyncButton
+            // 
+            this.SyncButton.Location = new System.Drawing.Point(71, 126);
+            this.SyncButton.Name = "SyncButton";
+            this.SyncButton.Size = new System.Drawing.Size(143, 23);
+            this.SyncButton.TabIndex = 19;
+            this.SyncButton.Text = "Sync";
+            this.SyncButton.UseVisualStyleBackColor = true;
+            this.SyncButton.Click += new System.EventHandler(this.SyncButton_Click);
+            // 
+            // CoverButton
+            // 
+            this.CoverButton.Location = new System.Drawing.Point(71, 155);
+            this.CoverButton.Name = "CoverButton";
+            this.CoverButton.Size = new System.Drawing.Size(143, 23);
+            this.CoverButton.TabIndex = 20;
+            this.CoverButton.Text = "Cover";
+            this.CoverButton.UseVisualStyleBackColor = true;
+            this.CoverButton.Click += new System.EventHandler(this.CoverButton_Click);
+            // 
+            // ServiceBoilerplateForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 12F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(284, 353);
+            this.Controls.Add(this.CoverButton);
+            this.Controls.Add(this.SyncButton);
             this.Controls.Add(this.CodeComboBox);
             this.Controls.Add(this.CodeLabel);
             this.Controls.Add(this.EndTimeTextBox);
@@ -122,7 +140,7 @@
             this.Controls.Add(this.BeginTimeLabel);
             this.Controls.Add(this.ResultTextBox);
             this.Controls.Add(this.ResultLabel);
-            this.Name = "Form1";
+            this.Name = "ServiceBoilerplateForm";
             this.Text = "ServiceBoilerplate";
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -139,6 +157,8 @@
         private System.Windows.Forms.Label BeginTimeLabel;
         private System.Windows.Forms.TextBox ResultTextBox;
         private System.Windows.Forms.Label ResultLabel;
+        private System.Windows.Forms.Button SyncButton;
+        private System.Windows.Forms.Button CoverButton;
     }
 }
 

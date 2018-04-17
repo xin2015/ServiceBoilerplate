@@ -28,32 +28,12 @@ namespace ServiceBoilerplate.Forms
             }
         }
 
-        private void BeginTimeLabel_Click(object sender, EventArgs e)
+        private void SyncButton_Click(object sender, EventArgs e)
         {
 
         }
 
-        private void EndTimeLabel_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void EndTimeTextBox_TextChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void CodeComboBox_SelectedIndexChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void BeginTimeTextBox_TextChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void CodeLabel_Click(object sender, EventArgs e)
+        private void CoverButton_Click(object sender, EventArgs e)
         {
 
         }
